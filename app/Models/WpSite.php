@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class WpSite extends Model
 {
     use HasFactory;
+
+    public function wp_category(){
+        return $this->belongsTo('App\Models\WpCategory');
+    }
 }
